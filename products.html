@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Campus Cart</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Google Fonts: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Leaflet.js for Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="/">Campus Cart</a>
+        </div>
+        <nav id="nav-links">
+            <!-- Nav links will be loaded by JS -->
+        </nav>
+    </header>
+
+    <main class="main-content" style="align-items: flex-start;">
+        <div class="product-page-container">
+            <h1 class="main-headline" style="text-align: center;">Explore Products</h1>
+            
+            <div class="search-container">
+                <form id="search-form"><input type="search" id="search-input" placeholder="Search for products..."><button type="submit">Search</button></form>
+            </div>
+
+            <div class="filter-sort-container">
+                <div class="filter-group">
+                    <label for="sort-by">Sort By:</label>
+                    <select id="sort-by" name="sort">
+                        <option value="date-desc">Newest</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="product-listings" class="product-grid"></div>
+        </div>
+    </main>
+
+    <script src="/js/products.js"></script>
+</body>
+</html>

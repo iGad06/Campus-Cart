@@ -1,0 +1,322 @@
+/* --- Global Styles --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5; /* Light grey/off-white background */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header / Navigation Bar --- */
+.navbar {
+    background-color: #333333; /* Solid dark color */
+    color: #FFFFFF;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.navbar .logo a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navbar nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+}
+
+/* --- Main Body Content --- */
+.main-content {
+    flex-grow: 1; /* Allows the main content to fill available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 2rem; /* Add padding to account for fixed header and footer */
+}
+
+.product-page-container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+}
+
+.content-wrapper {
+    max-width: 800px;
+}
+
+.main-headline {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+}
+
+.main-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 1rem;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: #333333; /* Solid dark color, matching header */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* --- Form Container Styling (for Login, Register, Create Product) --- */
+.form-container {
+    background: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="number"],
+.form-container input[type="file"],
+.form-container textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+/* --- Product Page Specifics --- */
+.search-container {
+    margin: 1rem auto 1rem;
+    max-width: 600px;
+    display: flex;
+}
+
+.search-container input {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+
+.search-container button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.filter-sort-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.filter-group label {
+    margin-right: 0.75rem;
+    font-weight: 500;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background: #FFFFFF;
+    border: 1px solid #EAECEF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.product-card-img-container {
+    height: 200px;
+    background-color: #eee;
+}
+
+.product-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-card-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.product-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #EAECEF;
+}
+
+.product-card .price {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.product-card .seller {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.product-card-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.product-card-buttons button {
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contact-button { background-color: #4A90E2; }
+.contact-button:hover { background-color: #3a7ac8; }
+
+.map-button { background-color: #50E3C2; color: #333 !important; }
+.map-button:hover { background-color: #45b8a0; }
+
+.delete-button { background-color: #e53e3e; }
+.delete-button:hover { background-color: #c53030; }
+
+/* --- Map Modal --- */
+.map-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 2000;
+}
+.map-modal-content {
+    background: white; padding: 20px; border-radius: 8px; position: relative;
+    width: 80%; max-width: 600px;
+}
+.map-modal-close {
+    position: absolute; top: 10px; right: 15px; font-size: 1.5rem; cursor: pointer;
+}
+#map-container { height: 400px; }
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 1rem;
+        flex-direction: column;
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .navbar .logo a {
+        margin-bottom: 0.5rem;
+    }
+
+    .main-content {
+        padding-top: 120px; /* Adjust for taller header */
+    }
+
+    .main-headline {
+        font-size: 2.5rem;
+    }
+
+    .main-subtitle {
+        font-size: 1.2rem;
+    }
+}

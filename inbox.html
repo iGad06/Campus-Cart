@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox - Campus Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="/" style="color: white; text-decoration: none;">Campus Cart</a>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <!-- Dynamic nav links will be added by JS if user is logged in -->
+        </nav>
+    </header>
+
+    <main class="main-content" style="text-align: left; max-width: 1000px; margin: auto;">
+        <div class="inbox-container">
+            <div class="conversations-panel">
+                <div class="panel-header">
+                    <h2>Conversations</h2>
+                </div>
+                <div id="conversations-list">
+                    <p>Loading conversations...</p>
+                </div>
+            </div>
+            <div class="messages-panel">
+                <div id="message-view-header" class="panel-header" style="display: none;">
+                    <!-- Header content will be populated by JS -->
+                </div>
+                <div id="message-list">
+                    <div class="no-conversation-selected">
+                        <p>Select a conversation to start messaging.</p>
+                    </div>
+                </div>
+                <form id="reply-form" style="display: none;">
+                    <input type="text" name="messageBody" placeholder="Type your message..." required>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="inbox.js"></script>
+</body>
+</html>
